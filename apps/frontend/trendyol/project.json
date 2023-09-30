@@ -1,0 +1,78 @@
+{
+  "name": "frontend-trendyol",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/frontend/trendyol/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/frontend/trendyol"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "frontend-trendyol:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "frontend-trendyol:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "frontend-trendyol:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "frontend-trendyol:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "frontend-trendyol:build:development"
+        },
+        "production": {
+          "buildTarget": "frontend-trendyol:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/apps/frontend/trendyol"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/frontend/trendyol/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "frontend-trendyol:build"
+      }
+    }
+  },
+  "tags": []
+}

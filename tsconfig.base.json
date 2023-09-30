@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@e-commerce/lib/services/api": ["lib/services/api/src/index.ts"],
+      "@e-commerce/lib/types/e-commerce": ["lib/types/e-commerce/src/index.ts"],
+      "@e-commerce/lib/ui/e-commerce-components": [
+        "lib/ui/e-commerce-components/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
