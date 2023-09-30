@@ -1,0 +1,26 @@
+.footer {
+    /* // display: none; */
+    width: 100%;
+    background-color: bisque;
+    height: 100px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 40px;
+}
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.footer ul li:hover {
+    color: blue;
+    cursor: pointer;
+}

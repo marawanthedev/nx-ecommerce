@@ -1,1 +1,8 @@
 /* Your styles goes here. */
+.main {
+    flex-grow: 1;
+}
+
+.App {
+    display: flex;
+}

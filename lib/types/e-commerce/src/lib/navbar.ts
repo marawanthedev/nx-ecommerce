@@ -1,7 +1,6 @@
-export interface NavItem {
-    name: string;
-    link: string;
-}
+import { NavigationItem } from "./common";
+
+export type NavItem = NavigationItem
 
 export interface NavbarProps {
     items: NavItem[];
