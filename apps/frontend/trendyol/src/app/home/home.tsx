@@ -1,13 +1,12 @@
-import React, { useEffect, useMemo } from 'react'
+import React from 'react'
 import { Page, ProductCategoryHeader, ProductCard } from "@e-commerce/lib/ui/e-commerce-components"
-import { ApiService } from "@e-commerce/lib/services/api"
 import { Product } from "@e-commerce/lib/types/e-commerce"
 import { useProduct } from '@e-commerce/lib/services/hooks'
 
 import "./home.css"
 
 export default function Home() {
-    const { products, categorizedProducts, isLoading } = useProduct({ url: 'https://dummyjson.com' })
+    const { categorizedProducts, isLoading } = useProduct({ url: 'https://dummyjson.com' })
 
 
     const onAddToCart = () => {
@@ -19,7 +18,7 @@ export default function Home() {
 
 
     return (
-        <Page className="home">
+        <Page className="home" isLoading={isLoading}>
 
             {Object.keys(categorizedProducts).map((category) => {
                 return <div aria-label={`${category} product list header`} className='category-product-list'>
