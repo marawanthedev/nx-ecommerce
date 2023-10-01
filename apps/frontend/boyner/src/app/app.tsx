@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Home from './home/home';
-import { Navbar, Footer, Template } from "@e-commerce/lib/ui/e-commerce-components"
+import { Template } from "@e-commerce/lib/ui/e-commerce-components"
 import { NavItem } from '@e-commerce/lib/types/e-commerce';
 
 import { Route, Routes } from 'react-router-dom';

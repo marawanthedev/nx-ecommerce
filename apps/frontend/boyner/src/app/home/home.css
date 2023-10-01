@@ -1,4 +1,19 @@
 .home {
-    background-color: red;
+    /* background-color: orange; */
     width: 100%;
+    padding: 2.5%;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+}
+
+.product-list-header {
+    margin-bottom: 20px;
+}
+
+.category-product-list {
+    margin: 20px 0;
 }

@@ -1,11 +1,17 @@
-const baseUrl = 'https://dummyjson.com'
 
+let baseUrl: string | null | undefined;
+
+
+function setBaseUrl(url: string) {
+  baseUrl = url;
+}
 
 // get products
 // get categories
 // and so on
 
 const centralizedFetch = async (url: string, options: RequestInit = {}) => {
+  if (baseUrl === '' || baseUrl === null || !baseUrl) throw new Error('baseUrl not set')
   try {
     const res = await fetch(`${baseUrl}${url}`, options)
     const data = await res.json();
@@ -30,7 +36,8 @@ async function getAllCategories() {
 
 export const ApiService = {
   getAllProducts,
-  getAllCategories
+  getAllCategories,
+  setBaseUrl
 }
 
 // get by id

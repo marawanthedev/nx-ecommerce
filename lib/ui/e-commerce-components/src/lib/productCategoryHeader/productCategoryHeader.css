@@ -1,0 +1,7 @@
+.product-category-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 15px;
+    text-transform: capitalize;
+}

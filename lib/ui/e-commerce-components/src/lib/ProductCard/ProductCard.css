@@ -1,0 +1,13 @@
+.product-card-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-card-desc :after {
+    content: "...";
+    display: inline-block;
+    width: 1em; /* Adjust as needed */
+    margin-left: 5px; /* Adjust as needed for spacing */
+}
